@@ -20,16 +20,11 @@ type ButtonProps = Partial<NaviveButtonProps & AnchorProps>;
 const Button: React.FunctionComponent<ButtonProps> = props => {
   const { className, disabled, loading, size, type, href, children, ...rest } =
     props;
-  const classes = classnames(
-    "btn",
-    className,
-    {
-      [`button-${type}`]: type,
-      [`button-${size}`]: size,
-      disabled: type === "link" && disabled,
-    },
-    className
-  );
+  const classes = classnames("btn", className, {
+    [`button-${type}`]: type,
+    [`button-${size}`]: size,
+    disabled: type === "link" && disabled,
+  });
   if (type === "link") {
     return (
       <a href={href} className={classes} {...rest}>
