@@ -24,6 +24,7 @@ const Button: React.FunctionComponent<ButtonProps> = props => {
     [`button-${type}`]: type,
     [`button-${size}`]: size,
     disabled: type === "link" && disabled,
+    loading: loading,
   });
   if (type === "link") {
     return (
@@ -34,6 +35,7 @@ const Button: React.FunctionComponent<ButtonProps> = props => {
   } else {
     return (
       <button disabled={disabled} className={classes} {...rest}>
+        {loading && <i className="fas fa-spinner pin" aria-hidden="true" />}
         {children}
       </button>
     );

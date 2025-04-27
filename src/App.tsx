@@ -17,7 +17,9 @@ export default function App() {
       </Button>
       <Button size="small">smallbutton</Button>
       <Button size="large">largebutton</Button>
-      <Button type="danger">dangerbutton</Button>
+      <Button loading type="danger">
+        dangerbutton
+      </Button>
       <Button type="primary">primarybutton</Button>
       <Button size="default">defaultbutton</Button>
       <Button href="http://www.baidu.com" type="link">
